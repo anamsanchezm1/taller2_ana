@@ -15,6 +15,9 @@ def division(a, b):
         raise ValueError("No se puede dividir por cero")
     else:
         return a / b
+    
+def potencia(a, b):
+    return a ** b
 
 def calculadora():
     print("=== Calculadora ===")
@@ -22,12 +25,13 @@ def calculadora():
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
-    print("5. Salir")
+    print("5. Potencia")
+    print("6. Salir")
 
     while True:
         opcion = input("\nElige una opción (1/2/3/4/5): ")
         
-        if opcion == "5":
+        if opcion == "6":
             print("¡Hasta luego!")
             break
         elif opcion == "1":
@@ -50,6 +54,11 @@ def calculadora():
             num2 = float(input("Segundo número: "))
             resultado = division(num1, num2)
             print(f"Resultado: {num1} / {num2} = {resultado}")
+        elif opcion == "5":
+            num1 = float(input("Base: "))
+            num2 = float(input("Exponente: "))
+            resultado = potencia(num1, num2)
+            print(f"Resultado: {num1} ^ {num2} = {resultado}")
         else:
             print("Opción no válida")
 
