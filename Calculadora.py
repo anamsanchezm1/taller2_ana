@@ -19,6 +19,9 @@ def division(a, b):
 def potencia(a, b):
     return a ** b
 
+def residuo(a, b):
+    return a%b
+
 def calculadora():
     print("=== Calculadora ===")
     print("1. Suma")
@@ -26,12 +29,12 @@ def calculadora():
     print("3. Multiplicación")
     print("4. División")
     print("5. Potencia")
-    print("6. Salir")
+    print("6. Residuo")
+    print("7. Salir")
 
     while True:
-        opcion = input("\nElige una opción (1/2/3/4/5): ")
-        
-        if opcion == "6":
+        opcion = input("\nElige una opción (1/2/3/4/5/6/7): ")
+        if opcion == "7":
             print("¡Hasta luego!")
             break
         elif opcion == "1":
@@ -59,6 +62,11 @@ def calculadora():
             num2 = float(input("Exponente: "))
             resultado = potencia(num1, num2)
             print(f"Resultado: {num1} ^ {num2} = {resultado}")
+        elif opcion == "6":
+            num1 = float(input("Primer número: "))
+            num2 = float(input("Segundo número: "))
+            resultado = residuo(num1, num2)
+            print(f"Resultado: {num1} % {num2} = {resultado}")
         else:
             print("Opción no válida")
 
